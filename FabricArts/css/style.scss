@@ -1,0 +1,56 @@
+$color-bg-white: #fff;
+$color-text: #000000;
+$color-copy-text: #898989;
+
+@mixin inner($w: 73%, $mw: 1600px) {
+  width: $w;
+  max-width: $mw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin flex($a: center, $j: space-between) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: $j;
+  align-items: $a;
+}
+
+body {
+  color: $color-text;
+  font-size: 14px;
+  font-family: "Yu Gothic", "Helvetica", "Helvetica Neue", "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  background-color: $color-bg-white;
+
+  &__inner {
+    @include inner();
+  }
+}
+
+.footer {
+  background-color: $color-bg-white;
+  color: $color-copy-text;
+
+  &__copy {
+    text-align: right;
+  }
+}

@@ -1,0 +1,39 @@
+body {
+  color: #000000;
+  font-size: 14px;
+  font-family: "Yu Gothic", "Helvetica", "Helvetica Neue", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  background-color: #fff;
+}
+.header__inner {
+  width: 73%;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer {
+  background-color: #fff;
+  color: #898989;
+}
+.footer__copy {
+  text-align: right;
+}
+/*# sourceMappingURL=style.css.map */

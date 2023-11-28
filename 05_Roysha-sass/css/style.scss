@@ -1,0 +1,190 @@
+$color-bg-blue: #123d88;
+$color-bg-sky: #f7faff;
+$color-text: #6c6c6c;
+$color-title: #262934;
+$color-main: #256be6;
+$color-info: #2dbe61;
+$color-warning: #f87624;
+
+@mixin inner($w: 90%, $mw: 1200px) {
+  width: $w;
+  max-width: $mw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin flex($a: center, $j: space-between) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: $j;
+  align-items: $a;
+}
+
+@mixin py($y: 80px) {
+  padding-top: $y;
+  padding-bottom: $y;
+}
+
+body {
+  color: $color-text;
+  line-height: (28/16);
+  font-size: 16px;
+  font-family: Helvetica, Arial, sans-serif;
+  letter-spacing: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  background-color: $color-bg-blue;
+  @include py(30px);
+}
+
+.footer {
+  @include py(32px);
+  background-color: $color-bg-blue;
+
+  &__inner {
+    @include inner();
+  }
+
+  &__copy {
+    font-size: 15px;
+  }
+}
+
+// unit
+.unit {
+  &__catch {
+    margin-bottom: 20px;
+    color: #256be6;
+    font-size: 14px;
+    letter-spacing: (50/1000) em;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    color: $color-title;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: (48/36);
+  }
+
+  &__text {
+    margin-bottom: 40px;
+  }
+}
+
+// card
+
+.card {
+  &__icon {
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    color: #2f2f35;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: (28/22);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.btn {
+  display: block;
+  width: 200px;
+  margin-top: 60px;
+  padding: 20px 0;
+  background-color: $color-main;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: (25/1000) em;
+  text-align: center;
+  border-radius: 27.5px;
+
+  &__info {
+    background-color: $color-info;
+  }
+
+  &__warning {
+    background-color: $color-warning;
+  }
+}
+
+// index.html
+// features
+.features {
+  @include py();
+
+  &__inner {
+    @include flex();
+    @include inner();
+  }
+
+  &__info {
+    width: (552/1200) * 100%;
+  }
+
+  &__list {
+    width: (552/1200) * 100%;
+    margin-bottom: -70px;
+    @include flex();
+  }
+
+  &__item {
+    width: (254/552) * 100%;
+    margin-bottom: 70px;
+  }
+}
+
+// payment
+
+.payment {
+  @include py();
+  background-color: $color-bg-sky;
+
+  &__inner {
+    @include flex();
+    @include inner();
+    flex-direction: row-reverse;
+  }
+
+  &__info {
+    width: (552/1200) * 100%;
+  }
+
+  .visual {
+    width: (552/1200) * 100%;
+  }
+}
+
+// service.html
+// wedo
+.wedo {
+  &__inner {
+    @include inner();
+  }
+
+  &__info {
+    @include inner(100%, 700px);
+  }
+}
